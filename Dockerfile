@@ -1,4 +1,4 @@
-FROM alpine
+FROM ubuntu
 USER root
 COPY ./rrshare /opt/rrshare
 
