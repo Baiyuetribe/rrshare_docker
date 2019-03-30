@@ -1,6 +1,19 @@
 # rrshare
 rrshare for docker
 
-## 人人影视web下载器
+### 人人影视web下载器（rrshare for docker）
 
-测试中。。。。
+### 食用方法
+```
+docker run  -d -p 3001:3001 -v /opt/rrdata:/opt/work/store baiyuetribe/rrshare　　＃仅１６ＭＢ
+```
+访问http://ip:3001 打开后台 解锁密码默认为123456，可在设置里面修改
+参数说明：
+　－ｐ　３００１端口可自定义，比如想改成８０端口，可以改为－ｐ　８０：３００１
+　－ｖ　用于宿主机挂载下载后文件目录，可通过路径／ｏｐｔ／ｒｒｄａｔａ查看数据
+
+配合h5ai可以实现在线播放：
+```
+docker run -t -p 10010:80 -v /opt/rrdata:/h5ai --name h5ai ilemonrain/h5ai:full    #自带ＨＴＭＬ５视频播放
+```
+访问http://ip:10010 就可以看到已下载的视频文件，可在线播放。
