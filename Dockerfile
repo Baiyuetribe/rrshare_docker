@@ -1,6 +1,6 @@
 FROM alpine
 USER root
-COPY ./rrshareweb /opt/rrshare
+COPY ./rrshare /opt/rrshare
 
 VOLUME ["/opt/work/store"]
 CMD ["/opt/rrshare/rrshareweb"]
