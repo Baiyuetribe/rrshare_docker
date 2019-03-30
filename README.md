@@ -1,5 +1,5 @@
 # rrshare
-rrshare for docker
+rrshare for docker（基于alpine+最新版人人影视客户端）
 
 ### 人人影视web下载器（rrshare for docker）
 
