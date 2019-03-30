@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM centos:6.9
 USER root
 COPY ./rrshare /opt/rrshare
 
