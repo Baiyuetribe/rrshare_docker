@@ -5,7 +5,7 @@ rrshare for docker
 
 ### 食用方法
 ```
-docker run  -d -p 3001:3001 -v /opt/rrdata:/opt/work/store baiyuetribe/rrshare　　＃仅１６ＭＢ
+docker run -d -p 3001:3001 -v /opt/rrdata:/opt/work/store --name rrys baiyuetribe/rrshare   #仅16MB
 ```
 访问http://ip:3001 打开后台 解锁密码默认为123456，可在设置里面修改
 参数说明：
