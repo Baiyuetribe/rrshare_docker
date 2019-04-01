@@ -8,7 +8,7 @@ LABEL MAINTAINER="azure <https://baiyue.one>"
 ENV GLIBC_VERSION=2.29-r0
 
 RUN apk update \
-	&& apk --no-cache add wget ca-certificates tzdata \
+	&& apk --no-cache add wget libstdc++ tzdata \
 	&& cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
 	&& echo 'Asia/Shanghai' >  /etc/timezone \
 	&& wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub \
@@ -27,6 +27,6 @@ RUN apk update \
 
 WORKDIR /
 VOLUME ["/opt/work/store"]
-EXPOSE 3001
+EXPOSE 3001 
 
 CMD ["sh", "-c", "/rrshare/rrshareweb/rrshareweb"]
