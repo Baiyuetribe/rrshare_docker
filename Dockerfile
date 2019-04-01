@@ -25,8 +25,8 @@ RUN apk update \
 	&& rm -rf /glibc-${GLIBC_VERSION}.apk \
 	&& rm -rf /glibc-bin-${GLIBC_VERSION}.apk
 
+WORKDIR /
 VOLUME ["/opt/work/store"]
 EXPOSE 3001
 
 CMD ["sh", "-c", "/rrshare/rrshareweb/rrshareweb"]
-
