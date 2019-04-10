@@ -3,6 +3,12 @@ rrshare for docker（基于alpine+最新版人人影视客户端）
 
 ### 人人影视web下载器（rrshare for docker）
 
+一键脚本（centos）
+```
+bash <(curl -L -s https://raw.githubusercontent.com/Baiyuetribe/rrshare_docker/master/rrshare.sh)
+```
+![](https://ww1.sinaimg.cn/large/007i4MEmgy1g1xunvmd4yj30lb0buq35.jpg)
+
 ### 食用方法
 ```
 docker run -d -p 3001:3001 -v /opt/rrdata:/opt/work/store --name rrys baiyuetribe/rrshare   #仅16MB
