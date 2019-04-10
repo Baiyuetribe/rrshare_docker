@@ -51,18 +51,18 @@ stop_rrshare(){
     docker stop rrys
 }
 start_rrshare(){
-    docker start rrys
+    docker restart rrys
 }
 
 # 安装h5ai在线播放器
 install_h5ai(){
-    docker run -t -p 10010:80 -v /opt/rrdata:/h5ai --name h5ai ilemonrain/h5ai:full    
+    docker run -d -p 10010:80 -v /opt/rrdata:/h5ai --name h5ai ilemonrain/h5ai:full    
 }
 stop_h5ai(){
     docker stop h5ai
 }
 start_h5ai(){
-    docker start h5ai
+    docker restart h5ai
 }
 
 # 删除
@@ -98,7 +98,7 @@ start_menu(){
     echo -e "\033[0;33m 1. 安装【人人影视】\033[0m"
     echo -e "\033[0;33m 2. 安装【人人影视+H5ai在线播放】\033[0m"
     echo -e "\033[0;33m 3. 停止【人人+h5ai】\033[0m"
-    echo -e "\033[0;33m 4. 启动【人人+h5ai】\033[0m"
+    echo -e "\033[0;33m 4. 重启【人人+h5ai】\033[0m"
     echo -e "\033[37;41m 5. 卸载【人人+H5ai】\033[0m"
     echo " 0. 退出脚本"
     echo
