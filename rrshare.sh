@@ -56,7 +56,7 @@ start_rrshare(){
 
 # 安装h5ai在线播放器
 install_h5ai(){
-    docker run -d -p 10010:80 -v /opt/rrdata:/h5ai --name h5ai ilemonrain/h5ai:full    
+    docker run -t -p 10010:80 -v /opt/rrdata:/h5ai --name h5ai ilemonrain/h5ai:full    
 }
 stop_h5ai(){
     docker stop h5ai
@@ -107,25 +107,33 @@ start_menu(){
     1)
 	check_docker
 	install_rrshare
+    echo -e "\033[32m====================================\033[0m"	
     echo -e "\033[32m人人影视已安装成功，请访问http://ip:3001\033[0m"
     echo -e "\033[32m默认解锁密码123456\033[0m"
+    echo -e "\033[32m====================================\033[0m"	
 	;;
 	2)
 	check_docker
 	install_rrshare
     install_h5ai
+    echo -e "\033[32m====================================\033[0m"	
     echo -e "\033[32m人人影视和h5ai已安装成功，人人影视访问地址：http://ip:3001 在线播放地址：http://ip:10010\033[0m"
     echo -e "\033[32m人人影视默认解锁密码123456\033[0m"
+    echo -e "\033[32m====================================\033[0m"
 	;;
 	3)
 	stop_h5ai
     stop_rrshare
+    echo -e "\033[32m====================================\033[0m"
 	echo -e "\033[32m已停用人人影视和h5ai\033[0m"
+    echo -e "\033[32m====================================\033[0m"
 	;;
 	4)
     start_rrshare
 	start_h5ai
+	echo -e "\033[32m====================================\033[0m"
 	echo -e "\033[32m已启动人人影视和h5ai\033[0m"
+    echo -e "\033[32m====================================\033[0m"
 	;;
 	5)
     remove_all
