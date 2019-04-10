@@ -56,7 +56,7 @@ start_rrshare(){
 
 # 安装h5ai在线播放器
 install_h5ai(){
-    docker run -t -p 10010:80 -v /opt/rrdata:/h5ai --name h5ai ilemonrain/h5ai:full    
+    docker run -d -p 10010:80 -v /opt/rrdata:/h5ai --name h5ai ilemonrain/h5ai:full    
 }
 stop_h5ai(){
     docker stop h5ai
