@@ -18,8 +18,9 @@
 # bash <(curl -L -s https://raw.githubusercontent.com/Baiyuetribe/rrshare_docker/master/rrshare.sh)             
 # @安装docker
 install_docker() {
-	curl -fsSL https://get.docker.com -o get-docker.sh
-	bash get-docker.sh
+    docker version > /dev/null || curl -fsSL get.docker.com | bash 
+    service docker restart 
+    systemctl enable docker  
 }
 
 # 单独检测docker是否安装，否则执行安装docker。
