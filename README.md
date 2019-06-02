@@ -9,7 +9,7 @@ bash <(curl -L -s https://raw.githubusercontent.com/Baiyuetribe/rrshare_docker/m
 ```
 ![](https://ww1.sinaimg.cn/large/007i4MEmgy1g1xunvmd4yj30lb0buq35.jpg)
 
-### 食用方法
+### 手动执行
 ```
 docker run -d -p 3001:3001 -v /opt/rrdata:/opt/work/store --name rrys baiyuetribe/rrshare   #仅16MB
 ```
